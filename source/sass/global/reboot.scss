@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #1d1613;
+
+  background-color: #fff;
+
+  margin: 0;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+body.shadow {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+a {
+  text-decoration: none;
+}

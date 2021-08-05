@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="jewellery">
+  <title>Jewellery | Main Page</title>
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-600.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-italic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="page-body">
+  <header class="page-body__page-header page-header">
+    <div class="page-header__up-container">
+      <div class="page-header__inner-up-container">
+        <div class="page-header__hamburger">
+          <button type="button">
+            <svg width="25" height="18" aria-hidden="true">
+              <use xlink:href="img/icons/sprite.svg#hamburger"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="page-header__search">
+          <span>
+            <svg width="14" height="14" aria-hidden="true">
+              <use xlink:href="img/icons/sprite.svg#magnifier"></use>
+            </svg>
+          </span>
+          <label class="visually-hidden" for="search">Поиск</label>
+          <input type="search" name="search" id="search" placeholder="Type here to search">
+        </div>
+        <div class="page-header__logo-container">
+          <a>
+            <svg width="66" height="66" aria-hidden="true">
+              <use xlink:href="img/icons/sprite.svg#logo"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="page-header__user-nav user-nav">
+          <a class="user-nav__cart" href="#">Cart <span>0</span></a>
+          <a class="user-nav__login" href="#">Login</a>
+          <a class="user-nav__cart-icon" href="#">
+            <svg width="20" height="18" aria-hidden="true">
+              <use xlink:href="img/icons/sprite.svg#cart"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="main-nav__container">
+        <a href="#">What’s new</a>
+        <a href="#">Chokers</a>
+        <a href="#">Necklaces</a>
+        <a href="#">Rings</a>
+        <a href="#">Earrings</a>
+      </div>
+    </nav>
+    <div class="page-header__lead-block">
+      <div class="page-header__lead-container">
+        <p>Perfection</p>
+        <span>Made to be yours</span>
+      </div>
+    </div>
+  </header>
+  <footer class="page-footer">
+    <div class="page-footer__container">
+      <div class="page-footer__subscription">
+        <h2>The good stuff in your inbox</h2>
+        <p>News and updates from CH. No spam, we promise.</p>
+        <div class="page-footer__email-input-wrap">
+          <label class="visually-hidden" for="email">Введите почту для подписки на обновления</label>
+          <input type="email" name="email" id="email" placeholder="Your E-mail">
+          <span>
+            Sign Up
+            <svg width="30" height="11" aria-hidden="true">
+              <use xlink:href="img/icons/sprite.svg#email-arrow-right"></use>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="page-footer__navigation">
+        <ul class="page-footer__navigation-list">
+          <li>
+            <a href="#">Ordering & Payment</a>
+          </li>
+          <li>
+            <a href="#">Terms & Conditions</a>
+          </li>
+          <li>
+            <a href="#">Returns & Exchanges</a>
+          </li>
+          <li>
+            <a href="#">Delivery</a>
+          </li>
+        </ul>
+        <ul class="page-footer__navigation-list">
+          <li>
+            <a href="#">About CH</a>
+          </li>
+          <li>
+            <a href="#">Stores & Hours</a>
+          </li>
+          <li>
+            <a href="#">Jobs</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <ul class="page-footer__socials">
+        <li>
+          <a href="#">
+            <span class="page-footer__icon-wrap page-footer__icon-wrap--facebook">
+              <svg width="8" height="15" aria-hidden="true">
+                <use xlink:href="img/icons/sprite.svg#facebook"></use>
+              </svg>
+            </span>
+            <span>Facebook</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="page-footer__icon-wrap page-footer__icon-wrap--instagram">
+              <svg width="15" height="15" aria-hidden="true">
+                <use xlink:href="img/icons/sprite.svg#instagram"></use>
+              </svg>
+            </span>
+            <span>Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="page-footer__icon-wrap page-footer__icon-wrap--pinterest">
+              <svg width="16" height="15" aria-hidden="true">
+                <use xlink:href="img/icons/sprite.svg#pinterest"></use>
+              </svg>
+            </span>
+            <span>Pinterest</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="page-footer__icon-wrap page-footer__icon-wrap--twitter">
+              <svg width="15" height="13" aria-hidden="true">
+                <use xlink:href="img/icons/sprite.svg#twitter"></use>
+              </svg>
+            </span>
+            <span>Twitter</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>

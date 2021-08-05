@@ -1,0 +1,70 @@
+{
+  "name": "jewellery",
+  "version": "1.0.0",
+  "description": "Третий проект Акселератора",
+  "main": "main.js",
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "build": "gulp build",
+    "start": "gulp",
+    "test": "npm run editorconfig && npm run stylelint && eslint source/js/"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.{sass,scss}"
+  ],
+  "engines": {
+    "node": "14.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metanol596/jewellery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/metanol596/jewellery/issues"
+  },
+  "homepage": "https://github.com/metanol596/jewellery#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.9",
+    "@htmlacademy/editorconfig-cli": "1.0.0",
+    "autoprefixer": "9.8.6",
+    "browser-sync": "2.27.5",
+    "eslint": "7.32.0",
+    "eslint-config-htmlacademy": "4.0.2",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "5.0.0",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-svgstore": "^8.0.0",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.3.6",
+    "postcss-csso": "^5.0.1",
+    "sass": "1.37.5",
+    "stylelint": "^13.13.1",
+    "stylelint-config-htmlacademy": "^0.1.10"
+  },
+  "dependencies": {
+    "del": "^6.0.0",
+    "imask": "^6.1.0"
+  }
+}

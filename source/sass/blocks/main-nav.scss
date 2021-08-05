@@ -1,0 +1,28 @@
+.main-nav {
+  display: grid;
+  justify-content: center;
+  padding: 19px 24px 18px;
+
+  @media (max-width: $desktop-width - 1) {
+    display: none;
+  }
+}
+
+.main-nav__container {
+  max-width: 493px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 35px;
+  margin: 0 0 0 10px;
+}
+
+.main-nav a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1d1613;
+
+  &:hover {
+    color: #9b9997;
+  }
+}
