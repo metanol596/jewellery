@@ -1,0 +1,31 @@
+.faq {
+  max-width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+
+  @media (max-width: $desktop-width - 1) {
+    padding: 0 45px;
+    width: 100%;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    padding: 0 15px;
+  }
+}
+
+.faq h2 {
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #1d1613;
+
+  margin: 0 0 49px;
+
+  @media (max-width: $mobile-only-width) {
+    margin: 0 0 28px;
+  }
+}

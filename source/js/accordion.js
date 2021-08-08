@@ -1,4 +1,4 @@
-const accordionItems = document.querySelectorAll('.page-footer__accordion-item');
+const accordionItems = document.querySelectorAll('.accordion__item');
 
 accordionItems.forEach((item) => {
 	item.classList.remove('no-js');
@@ -6,7 +6,7 @@ accordionItems.forEach((item) => {
 
 accordionItems.forEach((item) => {
 	item.addEventListener('click', () => {
-		const activeAccordionItem = document.querySelector('.page-footer__accordion-item.active');
+		const activeAccordionItem = document.querySelector('.accordion__item.active');
 
 			if (activeAccordionItem && activeAccordionItem !== item) {
 				activeAccordionItem.classList.toggle('active');

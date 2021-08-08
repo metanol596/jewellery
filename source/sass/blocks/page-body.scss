@@ -1,0 +1,11 @@
+.page-body__page-header {
+  margin-bottom: 120px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 60px;
+  }
+}

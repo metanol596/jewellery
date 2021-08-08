@@ -1,0 +1,125 @@
+.accordion {
+  border-top: 1px solid #a87b62;
+  border-left: 1px solid #a87b62;
+  border-right: 1px solid #a87b62;
+}
+
+.accordion__item {
+  border-bottom: 1px solid #a87b62;
+  padding: 41px 48px 39px 43px;
+
+  cursor: pointer;
+
+  @media (max-width: $desktop-width - 1) {
+    padding: 42px 49px 39px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    padding: 13px 23px 19px 24px;
+  }
+}
+
+
+
+.accordion__item-title {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  //margin: 0 0 9px;
+  padding-top: 5px;
+
+  @media (max-width: $desktop-width - 1) {
+    //margin: 0 0 27px;
+  }
+}
+
+.accordion__item h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  color: #1d1613;
+
+  text-align: left;
+  margin: 0;
+
+  @media (max-width: $mobile-only-width) {
+    font-size: 16px;
+    line-height: 140%;
+
+    width: 182px;
+  }
+}
+
+.accordion__item.active .accordion__item-title {
+  margin: 0 0 9px;
+
+  @media (max-width: $desktop-width - 1) {
+    //padding-top: 3px;
+    margin: 0 0 27px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    margin: 0 0 15px;
+  }
+}
+
+.accordion__item-body {
+  display: none;
+}
+
+.accordion__item.active .accordion__item-body {
+  display: block;
+  padding: 0px 5px 3px;
+
+  @media (max-width: $desktop-width - 1) {
+    padding: 0 0 3px;
+  }
+}
+
+.accordion__item.active p {
+  width: 527px;
+
+  @media (max-width: $desktop-width - 1) {
+    width: 528px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    width: 85%;
+  }
+}
+
+.accordion__item-body p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 130%;
+  color: #1d1613;
+
+  margin: 0;
+
+  @media (max-width: $mobile-only-width) {
+    font-size: 14px;
+    line-height: 140%;
+  }
+}
+
+.accordion__item-down-arrow-icon,
+.accordion__item-up-arrow-icon {
+  fill: none;
+
+  @media (max-width: $desktop-width - 1) {
+    width: 23px;
+    height: 12px;
+  }
+}
+
+.accordion__item .accordion__item-up-arrow-icon {
+  display: none;
+}
+
+.accordion__item.active .accordion__item-down-arrow-icon {
+  display: none;
+}
+
+.accordion__item.active .accordion__item-up-arrow-icon {
+  display: inline-flex;
+  transform: rotate(180deg);
+}

@@ -1,0 +1,35 @@
+.page-main__new-items-block {
+  margin-bottom: 52px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 68px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 58px;
+  }
+}
+
+.page-main__blog {
+  margin-bottom: 55px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 69px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.page-main__faq {
+  margin-bottom: 112px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 75px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 60px;
+  }
+}
