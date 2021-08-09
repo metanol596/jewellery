@@ -1,10 +1,10 @@
-.accordion {
+.accordeon {
   border-top: 1px solid #a87b62;
   border-left: 1px solid #a87b62;
   border-right: 1px solid #a87b62;
 }
 
-.accordion__item {
+.accordeon__item {
   border-bottom: 1px solid #a87b62;
   padding: 41px 48px 39px 43px;
 
@@ -21,7 +21,7 @@
 
 
 
-.accordion__item-title {
+.accordeon__item-title {
   display: grid;
   grid-template-columns: 1fr auto;
   //margin: 0 0 9px;
@@ -32,7 +32,7 @@
   }
 }
 
-.accordion__item h3 {
+.accordeon__item h3 {
   font-weight: 500;
   font-size: 18px;
   line-height: 130%;
@@ -49,7 +49,7 @@
   }
 }
 
-.accordion__item.active .accordion__item-title {
+.accordeon__item.active .accordeon__item-title {
   margin: 0 0 9px;
 
   @media (max-width: $desktop-width - 1) {
@@ -62,11 +62,11 @@
   }
 }
 
-.accordion__item-body {
+.accordeon__item-body {
   display: none;
 }
 
-.accordion__item.active .accordion__item-body {
+.accordeon__item.active .accordeon__item-body {
   display: block;
   padding: 0px 5px 3px;
 
@@ -75,7 +75,7 @@
   }
 }
 
-.accordion__item.active p {
+.accordeon__item.active p {
   width: 527px;
 
   @media (max-width: $desktop-width - 1) {
@@ -87,7 +87,7 @@
   }
 }
 
-.accordion__item-body p {
+.accordeon__item-body p {
   font-weight: normal;
   font-size: 16px;
   line-height: 130%;
@@ -101,8 +101,8 @@
   }
 }
 
-.accordion__item-down-arrow-icon,
-.accordion__item-up-arrow-icon {
+.accordeon__item-down-arrow-icon,
+.accordeon__item-up-arrow-icon {
   fill: none;
 
   @media (max-width: $desktop-width - 1) {
@@ -111,15 +111,42 @@
   }
 }
 
-.accordion__item .accordion__item-up-arrow-icon {
+.accordeon__item .accordeon__item-up-arrow-icon {
   display: none;
 }
 
-.accordion__item.active .accordion__item-down-arrow-icon {
+.accordeon__item.active .accordeon__item-down-arrow-icon {
   display: none;
 }
 
-.accordion__item.active .accordion__item-up-arrow-icon {
+.accordeon__item.active .accordeon__item-up-arrow-icon {
   display: inline-flex;
   transform: rotate(180deg);
+}
+
+.accordeon__item.no-js {
+  cursor: default;
+}
+
+.accordeon__item.no-js .accordeon__item-body {
+  display: block;
+}
+
+.accordeon__item.no-js .accordeon__item-title {
+  margin: 0 0 9px;
+
+  @media (max-width: $desktop-width - 1) {
+    //padding-top: 3px;
+    margin: 0 0 27px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    margin: 0 0 15px;
+  }
+
+}
+
+.accordeon__item.no-js .accordeon__item-down-arrow-icon,
+.accordeon__item.no-js .accordeon__item-up-arrow-icon {
+  display: none;
 }

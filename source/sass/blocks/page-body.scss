@@ -9,3 +9,15 @@
     margin-bottom: 60px;
   }
 }
+
+.page-body__page-header--catalog {
+  margin-bottom: 80px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 40px;
+  }
+}

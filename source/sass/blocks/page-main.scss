@@ -1,3 +1,19 @@
+.page-main--catalog {
+  margin: 0 auto;
+  max-width: 1366px;
+  padding: 0 98px;
+
+  @media (max-width: $desktop-width - 1) {
+    max-width: 768px;
+    padding: 0 45px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    max-width: 320px;
+    padding: 0 15px;
+  }
+}
+
 .page-main__new-items-block {
   margin-bottom: 52px;
 

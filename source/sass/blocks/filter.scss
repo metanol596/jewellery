@@ -1,0 +1,233 @@
+.filter {
+  background-color: #fff;
+  @media (max-width: $desktop-width - 1) {
+    display: none;
+  }
+}
+
+.filter.active {
+  @media (max-width: $desktop-width - 1) {
+    display: block;
+    position: relative;
+    width: 442px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    width: 280px;
+  }
+}
+
+.filter__filter-close-button {
+  display: none;
+
+  @media (max-width: $desktop-width - 1) {
+    display: block;
+    position: absolute;
+    border: none;
+    padding: 0;
+    z-index: 1;
+    top: -16px;
+    right: -16px;
+
+    cursor: pointer;
+
+    background-color: transparent;
+  }
+}
+
+.filter__accordeon {
+  border-top: 1px solid #a87b62;
+  border-right: 1px solid #a87b62;
+  border-left: 1px solid #a87b62;
+  margin-bottom: 35px;
+}
+
+.filter__accordeon-item {
+  border-bottom: 1px solid #a87b62;
+}
+
+
+
+.filter__accordeon-item-body {
+
+  display: none;
+}
+
+.filter__accordeon-item.active .filter__accordeon-item-body {
+  display: block;
+  padding: 0 35px 20px;
+}
+
+.filter__accordeon-item-title-wrap {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 0 25px;
+
+  cursor: pointer;
+}
+
+.filter__accordeon-item-up-arrow-icon {
+  display: none;
+}
+
+.filter__accordeon-item-input-wrap {
+  padding-left: 25px;
+  margin-bottom: 5px;
+}
+
+.filter__accordeon-item-title-wrap h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  margin: 24px 0 21px;
+  width: 170px;
+}
+
+.filter__accordeon-item--price h3{
+  margin-bottom: 17px;
+}
+
+.filter__accordeon-item--price.active .filter__accordeon-item-body {
+  width: 100%;
+  height: 59px;
+  padding: 0 24px;
+}
+
+.filter__accordeon-item-range-scale {
+  width: 200px;
+  height: 1px;
+  position: relative;
+
+  background-color: #f0eae4;
+}
+
+.filter__accordeon-item-range-bar {
+  width: 90px;
+  height: 1px;
+  position: absolute;
+  left: 60px;
+
+  background-color: #a87b62;
+}
+
+.filter__accordeon-item-range-controls {
+  position: relative;
+  padding-top: 9px;
+}
+
+.filter__accordeon-item-range-toggle {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: 8px solid #a87b62;
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  background-color: #a87b62;
+}
+
+.filter__accordeon-item-range-toggle.toggle-min {
+  left: 45px;
+}
+
+.filter__accordeon-item-range-toggle.toggle-max {
+  left: 150px;
+}
+
+.filter__accordeon-item-range-toggle span {
+  font-size: 14px;
+  line-height: 130%;
+
+  position: absolute;
+  top: 13px;
+  left: -18px;
+  display: inline-flex;
+  width: 50px;
+  height: 20px;
+}
+
+.filter__accordeon-item-title-wrap svg {
+  fill: none;
+}
+
+.filter__accordeon-item.active svg {
+  transform: rotate(180deg);
+}
+
+.filter__accordeon-item-input-wrap {
+}
+
+.filter__accordeon-item-input-wrap label {
+  font-size: 14px;
+  line-height: 130%;
+
+  display: inline-flex;
+  position: relative;
+
+  cursor: pointer;
+}
+
+.filter__accordeon-item-input-wrap label::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #a87b62;
+  position: absolute;
+  left: -25px;
+  top: 2px;
+
+  cursor: pointer;
+}
+
+.filter__accordeon-item-input-wrap input:checked + label::before {
+  background-color: #a87b62;
+}
+
+.filter__form-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__form-buttons button {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  padding: 24px 10px 23px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+
+  background-color: transparent;
+}
+
+.filter__form-buttons .filter__form-button-submit {
+  color: #fff;
+
+  margin-bottom: 26px;
+
+  background-color: #a87b62;
+}
+
+.filter__form-buttons .filter__form-button-reset {
+  color: #1d1613;
+
+  border: 1px solid #a87b62;
+}
+
+.filter__accordeon-item.no-js svg {
+  display: none;
+}
+
+.filter__accordeon-item.no-js .filter__accordeon-item-body {
+  display: block;
+  padding: 0 35px 20px;
+}
