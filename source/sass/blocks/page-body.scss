@@ -10,6 +10,18 @@
   }
 }
 
+.page-body__page-header--product-card {
+  margin-bottom: 80px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 0;
+  }
+}
+
 .page-body__page-header--catalog {
   margin-bottom: 80px;
 

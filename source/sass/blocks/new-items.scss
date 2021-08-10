@@ -14,6 +14,18 @@
   }
 }
 
+.new-items--product-card {
+  padding: 60px 0 0;
+
+  @media (max-width: $desktop-width - 1) {
+    padding: 45px 0 0;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    padding: 30px 0 0;
+  }
+}
+
 .new-items__container {
   max-width: 1170px;
   //padding: 0 45px;
@@ -47,6 +59,18 @@
   }
 }
 
+.new-items__up-container--product {
+  margin-bottom: 62px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 39px;
+  }
+}
+
 .new-items__up-container h2 {
   font-family: "Cormorant Garamond", "Georgia", serif;
   font-weight: bold;
@@ -60,6 +84,10 @@
   @media (max-width: $desktop-width - 1) {
     margin: 0 0 20px;
   }
+}
+
+.new-items__up-container--product h2 {
+  margin: 0 0 21px;
 }
 
 .new-items__up-container a {
