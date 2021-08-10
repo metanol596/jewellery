@@ -462,6 +462,55 @@
       </ul>
     </div>
   </footer>
+  <section class="modal modal--js">
+    <div class="modal__container">
+      <button class="modal__close-modal-button modal__close-modal-button--js">
+        <svg width="14" height="14" aria-hidden="true">
+          <use xlink:href="img/icons/sprite.svg#cross"></use>
+        </svg>
+      </button>
+      <h2>The item was added to your cart</h2>
+      <div class="modal__product-card-container">
+        <div class="modal__product-card">
+          <div class="modal__product-thumbnail-wrap">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/necklace-detail-mini-product-mobile.webp 1x, img/necklace-detail-mini-product-mobile@2x.webp 2x" type="image/webp">
+              <source media="(max-width: 1023px)" srcset="img/necklace-detail-mini-product-tablet.webp 1x, img/necklace-detail-mini-product-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1024px)"  srcset="img/necklace-detail-mini-product-desktop.webp 1x, img/necklace-detail-mini-product-desktop@2x.webp 2x" type="image/webp">
+              <img src="img/necklace-detail-mini-product-desktop.jpg" loading="lazy" width="84" height="79" alt="alve odonnell">
+              <!-- 1х: 84px/79px; 2x: 168px/158px -->
+            </picture>
+          </div>
+          <div class="modal__product-card-title-wrap">
+            <h3>Gold Necklace </h3>
+            <span>$ 115</span>
+          </div>
+        </div>
+        <div class="modal__product-to-cart">
+          <button class="modal__product-to-cart-plus">
+            <svg width="14" height="14" aria-hidden="true">
+              <use xlink:href="img/icons/sprite.svg#cart-plus"></use>
+            </svg>
+          </button>
+          <span class="modal__product-to-cart-amount">1</span>
+          <button class="modal__product-to-cart-minus">
+            <svg width="14" height="2" aria-hidden="true">
+              <use xlink:href="img/icons/sprite.svg#cart-minus"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="modal__product-amount-container">
+        <p class="modal__product-amount-info">You have <span>1</span> item in the cart</p>
+        <p class="modal__product-subtotal">Cart subtotal: $ <span>115</span></p>
+      </div>
+      <div class="modal__product-buttons">
+        <a href="catalog.html" class="modal__product-button-to-continue" type="button">Continue shopping</a>
+        <a href="cart.html" class="modal__product-button-checkout" type="button">Checkout</a>
+      </div>
+    </div>
+  </section>
+  <div class="page-body__shadow"></div>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>

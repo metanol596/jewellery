@@ -1,0 +1,248 @@
+.modal {
+  width: 500px;
+  position: absolute;
+  height: 439px;
+  max-height: 100%;
+  padding: 46px 31px 54px 35px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 101;
+  display: none;
+
+  overflow-y: auto;
+
+  background-color: #fff;
+
+  @media (max-width: $desktop-width - 1) {
+    width: 502px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    width: 290px;
+    height: 520px;
+    padding: 39px 15px 48px 14px;
+  }
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal__container {
+  position: relative;
+}
+
+.modal__close-modal-button {
+  background-color: transparent;
+
+  padding: 0;
+  border: none;
+  position: absolute;
+  top: -27px;
+  right: -13px;
+
+  cursor: pointer;
+
+  @media (max-width: $mobile-only-width) {
+    top: -24px;
+    right: 0;
+  }
+}
+
+.modal__container h2 {
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 130%;
+  color: #1d1613;
+
+  text-align: center;
+  margin: 0 0 48px;
+
+  @media (max-width: $mobile-only-width) {
+    font-size: 24px;
+    line-height: 120%;
+
+    width: 260px;
+    margin: 0 0 35px;
+  }
+}
+
+.modal__product-card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 56px;
+
+  @media (max-width: $mobile-only-width) {
+    margin-bottom: 47px;
+
+  }
+}
+
+.modal__product-card {
+  display: flex;
+}
+
+.modal__product-thumbnail-wrap {
+  margin-right: 21px;
+
+  @media (max-width: $mobile-only-width) {
+    margin-right: 16px;
+  }
+}
+
+.modal__product-thumbnail-wrap img {
+  display: flex;
+
+  @media (max-width: $desktop-width - 1) {
+    width: 88px;
+    height: auto;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    width: 70px;
+
+  }
+}
+
+.modal__product-card-title-wrap {
+  margin-top: -5px;
+}
+
+.modal__product-card-title-wrap h3 {
+  font-family: "Cormorant Garamond", "Georgia", serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 130%;
+  color: #1d1613;
+
+  text-align: center;
+  margin: 0 0 9px;
+
+  @media (max-width: $mobile-only-width) {
+    font-size: 16px;
+    line-height: 130%;
+
+    margin: 0 0 6px;
+  }
+}
+
+.modal__product-card-title-wrap span {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130%;
+  color: #1d1613;
+}
+
+.modal__product-to-cart {
+  display: flex;
+  flex-direction: column;
+  margin-top: -9px;
+  row-gap: 3px;
+  align-items: center;
+
+  @media (max-width: $mobile-only-width) {
+    margin-top: 0;
+    row-gap: 7px;
+  }
+}
+
+.modal__product-to-cart button {
+  border: none;
+  padding: 0;
+
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.modal__product-to-cart-amount {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 130%;
+
+  @media (max-width: $mobile-only-width) {
+    font-size: 16px;
+    line-height: 130%;
+  }
+}
+
+.modal__product-amount-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  margin-bottom: 36px;
+
+  @media (max-width: $mobile-only-width) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+  }
+}
+
+.modal__product-amount-container p {
+  font-size: 14px;
+  line-height: 130%;
+  color: #1d1613;
+
+  margin: 0;
+
+  @media (max-width: $mobile-only-width) {
+    font-size: 12px;
+  }
+}
+
+.modal__product-amount-info {
+  font-weight: normal;
+}
+
+.modal__product-subtotal {
+  justify-self: end;
+
+  @media (max-width: $mobile-only-width) {
+    justify-self: start;
+  }
+}
+
+.modal__product-buttons {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $mobile-only-width) {
+    flex-direction: column;
+    row-gap: 21px;
+  }
+}
+
+.modal__product-buttons a {
+  font-family: "Poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+
+  width: 200px;
+  padding: 22px 10px;
+  border: 1px solid #a87b62;
+
+  cursor: pointer;
+
+  @media (max-width: $mobile-only-width) {
+    width: 260px;
+  }
+}
+
+.modal__product-button-to-continue {
+  background-color: #fff;
+
+  color: #1d1613;
+}
+
+.modal__product-button-checkout {
+  background-color: #a87b62;
+
+  color: #fff;
+}

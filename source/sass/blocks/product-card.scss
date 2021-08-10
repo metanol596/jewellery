@@ -134,6 +134,8 @@
   line-height: 130%;
   color: #9b9997;
 
+  cursor: pointer;
+
   text-align: center;
   border: none;
   padding: 0;
@@ -143,6 +145,8 @@
 .product-card__product-description-button.active,
 .product-card__product-add-info-button.active {
   color: #1d1613;
+
+  cursor: default;
 }
 
 .product-card__product-description-list {
@@ -186,6 +190,8 @@
   color: #ffffff;
 
   background-color: #a87b62;
+
+  cursor: pointer;
 
   text-align: center;
   padding: 25px 25px 23px;
