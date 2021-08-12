@@ -74,11 +74,7 @@
 }
 
 .page-footer__email-input-wrap {
-  border-bottom: 1px solid #fff;
-
-  @media (max-width: $desktop-width - 1) {
-
-  }
+  border-bottom: 1px solid #ffffff;
 }
 
 .page-footer__email-input-wrap input {
@@ -94,7 +90,7 @@
   width: 394px;
 
   &:focus {
-    background-color: #fff;
+    background-color: #ffffff;
   }
 
   @media (max-width: $desktop-width - 1) {
@@ -114,7 +110,7 @@
 }
 
 .page-footer__email-input-wrap button {
-  font-family: "Poppins","Arial",sans-serif;
+  font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
@@ -143,7 +139,6 @@
 
   @media (max-width: $desktop-width - 1) {
     column-gap: 86px;
-
   }
 
   @media (max-width: $mobile-only-width) {
@@ -173,7 +168,7 @@
 .page-footer__navigation-list a {
   font-size: 16px;
   line-height: 130%;
-  color: #fff;
+  color: #ffffff;
 
   &:hover {
     text-decoration: underline;
@@ -191,14 +186,10 @@
 .page-footer__socials a {
   font-size: 16px;
   line-height: 130%;
-  color: #fff;
+  color: #ffffff;
 
-
-}
-
-.page-footer__icon-wrap svg {
-  @media (max-width: $mobile-only-width) {
-
+  &:hover {
+    color: #9b9997;
   }
 }
 

@@ -5,15 +5,40 @@
 
   @media (max-width: $desktop-width - 1) {
     display: none;
+    padding: 19px 46px 18px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    padding: 19px 15px 18px;
   }
 }
 
-.main-nav__container {
+.main-nav__container-up {
   max-width: 493px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 35px;
   margin: 0 0 0 10px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin: 0 0 39px;
+  }
+
+  @media (max-width: $mobile-only-width) {
+    margin: 0 0 30px;
+  }
+}
+
+.main-nav__container-down {
+  display: none;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 43px;
+  }
+}
+
+.main-nav__login {
+  display: none;
 }
 
 .main-nav a {
@@ -24,5 +49,29 @@
 
   &:hover {
     color: #9b9997;
+  }
+}
+
+.main-nav__container-up a {
+  @media (max-width: $desktop-width - 1) {
+    font-size: 24px;
+    line-height: 36px;
+    color: #ffffff;
+  }
+}
+
+.main-nav__container-down a {
+  @media (max-width: $desktop-width - 1) {
+    font-size: 18px;
+    line-height: 130%;
+    color: rgba(#ffffff, 0.75);
+  }
+}
+
+.main-nav__login a {
+  @media (max-width: $desktop-width - 1) {
+    font-size: 18px;
+    line-height: 130%;
+    color: #ffffff;
   }
 }

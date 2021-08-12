@@ -17,7 +17,7 @@
   margin-bottom: 62px;
 
   @media (max-width: $desktop-width - 1) {
-    margin-bottom: 59px;
+    margin-bottom: 62px;
   }
 
   @media (max-width: $mobile-only-width) {
@@ -48,11 +48,15 @@
   line-height: 130%;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #1D1613;
+  color: #1d1613;
 
   display: inline-flex;
   border-bottom: 1px solid #a87b62;
   padding-bottom: 5px;
+
+  &:hover {
+    color: #a87b62;
+  }
 }
 
 .follow-us__grid {

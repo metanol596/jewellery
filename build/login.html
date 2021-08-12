@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="jewellery">
+    <title>Jewellery | Main Page</title>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-600.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-italic.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="page-body">
+    <header class="page-header page-header--login">
+      <div class="page-header__logo-container">
+        <a href="main.html">
+          <svg class="page-header__logo-icon" width="66" height="66" aria-hidden="true">
+            <use xlink:href="img/icons/sprite.svg#logo"></use>
+          </svg>
+        </a>
+      </div>
+    </header>
+    <section class="login login--nojs">
+      <div class="login__bg-img"></div>
+      <div class="login__container">
+        <h2>Log In</h2>
+        <form class="login__form" method="POST" action="https://echo.htmlacademy.ru" autocomplete="off">
+          <div class="login__inputs-wrap">
+            <div class="login__input-wrap login__input-wrap--email">
+              <label class="visually-hidden" for="email"></label>
+              <input class="for-storage" type="email" name="email" id="login-email" placeholder="Your E-mail" required>
+            </div>
+            <div class="login__input-wrap login__input-wrap--password">
+              <label class="visually-hidden" for="password"></label>
+              <input class="for-storage" type="password" name="password" id="password" placeholder="Password" required>
+              <a href="#">Forgot ypur password?</a>
+            </div>
+          </div>
+          <button class="login__form-submit-button" type="submit">Log In</button>
+          <span class="login__form-sign-in">Don’t have an account?<a href="#">Sign up</a></span>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

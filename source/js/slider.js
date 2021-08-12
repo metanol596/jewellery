@@ -6,15 +6,12 @@ if (document.querySelector('.swiper-container')) {
 		},
 		pagination: {
 			el: '.swiper-pagination',
-			//буллеты
 			type: 'bullets',
 			clickable: true,
 			renderBullet: function (index, className) {
 				return '<span class="' + className + '">' + (index + 1) + '</span>';
 			}
 		},
-		//simulateTouch: false,
-		//touchRatio: 2,
 		grabCursor: true,
 		keyboard: {
 			enabled: true,
@@ -62,6 +59,4 @@ if (document.querySelector('.swiper-container')) {
 			}
 		}
 	});
-
 }
-

@@ -1,6 +1,5 @@
 .modal {
   width: 500px;
-  position: absolute;
   height: 439px;
   max-height: 100%;
   padding: 46px 31px 54px 35px;
@@ -15,7 +14,7 @@
 
   overflow-y: auto;
 
-  background-color: #fff;
+  background-color: #ffffff;
 
   @media (max-width: $desktop-width - 1) {
     width: 502px;
@@ -79,7 +78,6 @@
 
   @media (max-width: $mobile-only-width) {
     margin-bottom: 47px;
-
   }
 }
 
@@ -105,7 +103,6 @@
 
   @media (max-width: $mobile-only-width) {
     width: 70px;
-
   }
 }
 
@@ -236,7 +233,7 @@
 }
 
 .modal__product-button-to-continue {
-  background-color: #fff;
+  background-color: #ffffff;
 
   color: #1d1613;
 }
@@ -244,5 +241,5 @@
 .modal__product-button-checkout {
   background-color: #a87b62;
 
-  color: #fff;
+  color: #ffffff;
 }

@@ -1,51 +1,51 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="jewellery">
-  <title>Jewellery | Product Card</title>
-  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-600.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-italic.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/cormorant-garamond-v10-latin-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body class="page-body">
-  <header class="page-body__page-header page-body__page-header--product-card page-header">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="jewellery">
+    <title>Jewellery | Product Card</title>
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-600.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-700.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-italic.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/cormorant-garamond-v10-latin-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="page-body">
+  <header class="page-body__page-header page-body__page-header--product-card page-header page-header--closed no-js">
     <div class="page-header__up-container">
       <div class="page-header__inner-up-container">
         <div class="page-header__hamburger">
           <button type="button">
-            <svg width="25" height="18" aria-hidden="true">
+            <svg class="page-header__hamburger-icon" width="25" height="18" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#hamburger"></use>
             </svg>
           </button>
         </div>
-        <div class="page-header__search">
+        <form class="page-header__search" method="POST" action="https://echo.htmlacademy.ru">
           <span>
-            <svg width="14" height="14" aria-hidden="true">
+            <svg class="page-header__search-icon" width="14" height="14" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#magnifier"></use>
             </svg>
           </span>
           <label class="visually-hidden" for="search">Поиск</label>
-          <input type="search" name="search" id="search" placeholder="Type here to search">
-        </div>
+          <input class="page-header__search-input" type="search" name="search" id="search" placeholder="Type here to search">
+        </form>
         <div class="page-header__logo-container">
           <a href="main.html">
-            <svg width="66" height="66" aria-hidden="true">
+            <svg class="page-header__logo-icon" width="66" height="66" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#logo"></use>
             </svg>
           </a>
         </div>
         <div class="page-header__user-nav user-nav">
           <a class="user-nav__cart" href="#">Cart <span>0</span></a>
-          <a class="user-nav__login" href="#">Login</a>
+          <a class="user-nav__login login-link modal-button" href="login.html">Login</a>
           <a class="user-nav__cart-icon" href="#">
-            <svg width="20" height="18" aria-hidden="true">
+            <svg class="user-nav__cart-icon" width="20" height="18" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#cart"></use>
             </svg>
           </a>
@@ -53,12 +53,20 @@
       </div>
     </div>
     <nav class="main-nav">
-      <div class="main-nav__container">
+      <div class="main-nav__container-up">
         <a href="#">What’s new</a>
         <a href="#">Chokers</a>
         <a href="#">Necklaces</a>
         <a href="#">Rings</a>
         <a href="#">Earrings</a>
+      </div>
+      <div class="main-nav__container-down">
+        <a href="#">Necklaces</a>
+        <a href="#">Rings</a>
+        <a href="#">Earrings</a>
+      </div>
+      <div class="main-nav__login">
+        <a class="main-nav__login-link login-link modal-button" href="login.html">Login</a>
       </div>
     </nav>
   </header>
@@ -104,6 +112,7 @@
                 <!-- 1х: 470px/435px; 2x: 940px/870px -->
               </picture>
             </div>
+            <span>1 of 4</span>
           </div>
         </div>
         <div class="product-card__product-description-block">
@@ -132,7 +141,7 @@
             </div>
           </div>
           <div class="product-card__product-add-cart-button-wrap">
-            <button type="button">Add to cart</button>
+            <button class="product-card__product-modal-button modal-button" type="button">Add to cart</button>
             <div class="product-card__product-add-cart-button-inner-wrap">
               <span>14 Day Returns</span>
               <span>2-Year Warranty</span>
@@ -157,7 +166,7 @@
                     <picture>
                       <source media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile.webp 1x, img/purple-gemstone-necklace-mobile@2x.webp 2x" type="image/webp">
                       <source media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet.webp 1x, img/purple-gemstone-necklace-tablet@2x.webp 2x" type="image/webp">
-                      <source media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace-desktop.webp 1x, img/purple-gemstone-necklace-desktop.@2x.webp 2x" type="image/webp">
+                      <source media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace-desktop.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x" type="image/webp">
                       <img src="img/purple-gemstone-necklace-desktop.jpg" loading="lazy" width="270" height="284" alt="jess harper sunday">
                       <!-- 1х: 270px/284px; 2x: 540px/568px -->
                     </picture>
@@ -174,7 +183,7 @@
                     <picture>
                       <source media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile.webp 1x, img/layered-choker-necklace-mobile@2x.webp 2x" type="image/webp">
                       <source media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet.webp 1x, img/layered-choker-necklace-tablet@2x.webp 2x" type="image/webp">
-                      <source media="(min-width: 1024px)" srcset="img/layered-choker-necklace-desktop.webp 1x, img/layered-choker-necklace-desktop.@2x.webp 2x" type="image/webp">
+                      <source media="(min-width: 1024px)" srcset="img/layered-choker-necklace-desktop.webp 1x, img/layered-choker-necklace-desktop@2x.webp 2x" type="image/webp">
                       <img src="img/layered-choker-necklace-desktop.jpg" loading="lazy" width="270" height="284" alt="jess harper sunday">
                       <!-- 1х: 270px/284px; 2x: 540px/568px -->
                     </picture>
@@ -189,9 +198,7 @@
                 <a href="#">
                   <div class="slider__slide-img-wrap">
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-mobile@2x.webp 2x" type="image/webp">
-                      <source media="(max-width: 1023px)" srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-desktop@2x.webp 2x" type="image/webp">
-                      <source media="(min-width: 1024px)" srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-desktop.@2x.webp 2x" type="image/webp">
+                      <source srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-desktop@2x.webp 2x" type="image/webp">
                       <img src="img/dainty-gold-necklace-desktop.jpg" loading="lazy" width="270" height="284" alt="jess harper sunday">
                       <!-- 1х: 270px/284px; 2x: 540px/568px -->
                     </picture>
@@ -206,9 +213,7 @@
                 <a href="#">
                   <div class="slider__slide-img-wrap">
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-mobile@2x.webp 2x" type="image/webp">
-                      <source media="(max-width: 1023px)" srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-desktop@2x.webp 2x" type="image/webp">
-                      <source media="(min-width: 1024px)" srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-desktop.@2x.webp 2x" type="image/webp">
+                      <source srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-desktop@2x.webp 2x" type="image/webp">
                       <img src="img/galaxy-earrings-desktop.jpg" loading="lazy" width="270" height="284" alt="jess harper sunday">
                       <!-- 1х: 270px/284px; 2x: 540px/568px -->
                     </picture>
@@ -225,7 +230,7 @@
                     <picture>
                       <source media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile.webp 1x, img/purple-gemstone-necklace-mobile@2x.webp 2x" type="image/webp">
                       <source media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet.webp 1x, img/purple-gemstone-necklace-tablet@2x.webp 2x" type="image/webp">
-                      <source media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace-desktop.webp 1x, img/purple-gemstone-necklace-desktop.@2x.webp 2x" type="image/webp">
+                      <source media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace-desktop.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x" type="image/webp">
                       <img src="img/purple-gemstone-necklace-desktop.jpg" loading="lazy" width="270" height="284" alt="jess harper sunday">
                       <!-- 1х: 270px/284px; 2x: 540px/568px -->
                     </picture>
@@ -242,7 +247,7 @@
                     <picture>
                       <source media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile.webp 1x, img/layered-choker-necklace-mobile@2x.webp 2x" type="image/webp">
                       <source media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet.webp 1x, img/layered-choker-necklace-tablet@2x.webp 2x" type="image/webp">
-                      <source media="(min-width: 1024px)" srcset="img/layered-choker-necklace-desktop.webp 1x, img/layered-choker-necklace-desktop.@2x.webp 2x" type="image/webp">
+                      <source media="(min-width: 1024px)" srcset="img/layered-choker-necklace-desktop.webp 1x, img/layered-choker-necklace-desktop@2x.webp 2x" type="image/webp">
                       <img src="img/layered-choker-necklace-desktop.jpg" loading="lazy" width="270" height="284" alt="jess harper sunday">
                       <!-- 1х: 270px/284px; 2x: 540px/568px -->
                     </picture>
@@ -257,9 +262,7 @@
                 <a href="#">
                   <div class="slider__slide-img-wrap">
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-mobile@2x.webp 2x" type="image/webp">
-                      <source media="(max-width: 1023px)" srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-desktop@2x.webp 2x" type="image/webp">
-                      <source media="(min-width: 1024px)" srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-desktop.@2x.webp 2x" type="image/webp">
+                      <source srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-desktop@2x.webp 2x" type="image/webp">
                       <img src="img/dainty-gold-necklace-desktop.jpg" loading="lazy" width="270" height="284" alt="jess harper sunday">
                       <!-- 1х: 270px/284px; 2x: 540px/568px -->
                     </picture>
@@ -274,9 +277,7 @@
                 <a href="#">
                   <div class="slider__slide-img-wrap">
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-mobile@2x.webp 2x" type="image/webp">
-                      <source media="(max-width: 1023px)" srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-desktop@2x.webp 2x" type="image/webp">
-                      <source media="(min-width: 1024px)" srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-desktop.@2x.webp 2x" type="image/webp">
+                      <source srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-desktop@2x.webp 2x" type="image/webp">
                       <img src="img/galaxy-earrings-desktop.jpg" loading="lazy" width="270" height="284" alt="jess harper sunday">
                       <!-- 1х: 270px/284px; 2x: 540px/568px -->
                     </picture>
@@ -293,7 +294,7 @@
                     <picture>
                       <source media="(max-width: 767px)" srcset="img/purple-gemstone-necklace-mobile.webp 1x, img/purple-gemstone-necklace-mobile@2x.webp 2x" type="image/webp">
                       <source media="(max-width: 1023px)" srcset="img/purple-gemstone-necklace-tablet.webp 1x, img/purple-gemstone-necklace-tablet@2x.webp 2x" type="image/webp">
-                      <source media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace-desktop.webp 1x, img/purple-gemstone-necklace-desktop.@2x.webp 2x" type="image/webp">
+                      <source media="(min-width: 1024px)" srcset="img/purple-gemstone-necklace-desktop.webp 1x, img/purple-gemstone-necklace-desktop@2x.webp 2x" type="image/webp">
                       <img src="img/purple-gemstone-necklace-desktop.jpg" loading="lazy" width="270" height="284" alt="jess harper sunday">
                       <!-- 1х: 270px/284px; 2x: 540px/568px -->
                     </picture>
@@ -310,7 +311,7 @@
                     <picture>
                       <source media="(max-width: 767px)" srcset="img/layered-choker-necklace-mobile.webp 1x, img/layered-choker-necklace-mobile@2x.webp 2x" type="image/webp">
                       <source media="(max-width: 1023px)" srcset="img/layered-choker-necklace-tablet.webp 1x, img/layered-choker-necklace-tablet@2x.webp 2x" type="image/webp">
-                      <source media="(min-width: 1024px)" srcset="img/layered-choker-necklace-desktop.webp 1x, img/layered-choker-necklace-desktop.@2x.webp 2x" type="image/webp">
+                      <source media="(min-width: 1024px)" srcset="img/layered-choker-necklace-desktop.webp 1x, img/layered-choker-necklace-desktop@2x.webp 2x" type="image/webp">
                       <img src="img/layered-choker-necklace-desktop.jpg" loading="lazy" width="270" height="284" alt="jess harper sunday">
                       <!-- 1х: 270px/284px; 2x: 540px/568px -->
                     </picture>
@@ -325,9 +326,7 @@
                 <a href="#">
                   <div class="slider__slide-img-wrap">
                     <picture>
-                      <source media="(max-width: 767px)" srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-mobile@2x.webp 2x" type="image/webp">
-                      <source media="(max-width: 1023px)" srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-desktop@2x.webp 2x" type="image/webp">
-                      <source media="(min-width: 1024px)" srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-desktop.@2x.webp 2x" type="image/webp">
+                      <source srcset="img/dainty-gold-necklace-desktop.webp 1x, img/dainty-gold-necklace-desktop@2x.webp 2x" type="image/webp">
                       <img src="img/dainty-gold-necklace-desktop.jpg" loading="lazy" width="270" height="284" alt="jess harper sunday">
                       <!-- 1х: 270px/284px; 2x: 540px/568px -->
                     </picture>
@@ -344,7 +343,7 @@
                     <picture>
                       <source media="(max-width: 767px)" srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-mobile@2x.webp 2x" type="image/webp">
                       <source media="(max-width: 1023px)" srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-desktop@2x.webp 2x" type="image/webp">
-                      <source media="(min-width: 1024px)" srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-desktop.@2x.webp 2x" type="image/webp">
+                      <source media="(min-width: 1024px)" srcset="img/galaxy-earrings-desktop.webp 1x, img/galaxy-earrings-desktop@2x.webp 2x" type="image/webp">
                       <img src="img/galaxy-earrings-desktop.jpg" loading="lazy" width="270" height="284" alt="jess harper sunday">
                       <!-- 1х: 270px/284px; 2x: 540px/568px -->
                     </picture>
@@ -357,12 +356,12 @@
               </div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev slider__button-prev" type="button">
+            <div class="swiper-button-prev slider__button-prev">
               <svg width="30" height="11" aria-hidden="true">
                 <use xlink:href="img/icons/sprite.svg#left-slider-arrow"></use>
               </svg>
             </div>
-            <div class="swiper-button-next slider__button-next" type="button">
+            <div class="swiper-button-next slider__button-next">
               <svg width="30" height="11" aria-hidden="true">
                 <use xlink:href="img/icons/sprite.svg#right-slider-arrow"></use>
               </svg>
@@ -462,9 +461,9 @@
       </ul>
     </div>
   </footer>
-  <section class="modal modal--js">
+  <section class="modal modal-js">
     <div class="modal__container">
-      <button class="modal__close-modal-button modal__close-modal-button--js">
+      <button class="modal__close-modal-button close-modal-button-js">
         <svg width="14" height="14" aria-hidden="true">
           <use xlink:href="img/icons/sprite.svg#cross"></use>
         </svg>
@@ -505,12 +504,39 @@
         <p class="modal__product-subtotal">Cart subtotal: $ <span>115</span></p>
       </div>
       <div class="modal__product-buttons">
-        <a href="catalog.html" class="modal__product-button-to-continue" type="button">Continue shopping</a>
-        <a href="cart.html" class="modal__product-button-checkout" type="button">Checkout</a>
+        <a href="catalog.html" class="modal__product-button-to-continue">Continue shopping</a>
+        <a href="cart.html" class="modal__product-button-checkout">Checkout</a>
       </div>
+    </div>
+  </section>
+  <section class="login modal-js">
+    <div class="login__bg-img"></div>
+    <div class="login__container">
+      <button class="login__close-login-icon-wrap close-modal-button-js">
+        <svg class="login__close-login-icon" width="14" height="14" aria-hidden="true">
+          <use xlink:href="img/icons/sprite.svg#cross"></use>
+        </svg>
+      </button>
+      <h2>Log In</h2>
+      <form class="login__form" method="POST" action="https://echo.htmlacademy.ru" autocomplete="off">
+        <div class="login__inputs-wrap">
+          <div class="login__input-wrap login__input-wrap--email">
+            <label class="visually-hidden" for="email"></label>
+            <input class="for-storage" type="email" name="email" id="login-email" placeholder="Your E-mail" required>
+          </div>
+          <div class="login__input-wrap login__input-wrap--password">
+            <label class="visually-hidden" for="password"></label>
+            <input class="for-storage" type="password" name="password" id="password" placeholder="Password" required>
+            <a href="#">Forgot ypur password?</a>
+          </div>
+        </div>
+        <button class="login__form-submit-button" type="submit">Log In</button>
+        <span class="login__form-sign-in">Don’t have an account?<a href="#">Sign up</a></span>
+      </form>
     </div>
   </section>
   <div class="page-body__shadow"></div>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
-</body>
+  </body>
+</html>

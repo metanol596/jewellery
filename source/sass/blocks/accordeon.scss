@@ -6,7 +6,7 @@
 
 .accordeon__item {
   border-bottom: 1px solid #a87b62;
-  padding: 41px 48px 39px 43px;
+  padding: 39px 48px 41px 43px;
 
   cursor: pointer;
 
@@ -19,17 +19,10 @@
   }
 }
 
-
-
 .accordeon__item-title {
   display: grid;
   grid-template-columns: 1fr auto;
-  //margin: 0 0 9px;
   padding-top: 5px;
-
-  @media (max-width: $desktop-width - 1) {
-    //margin: 0 0 27px;
-  }
 }
 
 .accordeon__item h3 {
@@ -53,7 +46,6 @@
   margin: 0 0 9px;
 
   @media (max-width: $desktop-width - 1) {
-    //padding-top: 3px;
     margin: 0 0 27px;
   }
 
@@ -68,7 +60,7 @@
 
 .accordeon__item.active .accordeon__item-body {
   display: block;
-  padding: 0px 5px 3px;
+  padding: 0 5px 3px;
 
   @media (max-width: $desktop-width - 1) {
     padding: 0 0 3px;
@@ -136,14 +128,12 @@
   margin: 0 0 9px;
 
   @media (max-width: $desktop-width - 1) {
-    //padding-top: 3px;
     margin: 0 0 27px;
   }
 
   @media (max-width: $mobile-only-width) {
     margin: 0 0 15px;
   }
-
 }
 
 .accordeon__item.no-js .accordeon__item-down-arrow-icon,

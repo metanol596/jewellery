@@ -15,18 +15,6 @@
   display: block;
 }
 
-.page-body__page-header {
-  margin-bottom: 120px;
-
-  @media (max-width: $desktop-width - 1) {
-    margin-bottom: 70px;
-  }
-
-  @media (max-width: $mobile-only-width) {
-    margin-bottom: 60px;
-  }
-}
-
 .page-body__page-header--product-card {
   margin-bottom: 80px;
   border-bottom: 1px solid #f6f5f4;
@@ -38,17 +26,5 @@
 
   @media (max-width: $mobile-only-width) {
     margin-bottom: 0;
-  }
-}
-
-.page-body__page-header--catalog {
-  margin-bottom: 80px;
-
-  @media (max-width: $desktop-width - 1) {
-    margin-bottom: 50px;
-  }
-
-  @media (max-width: $mobile-only-width) {
-    margin-bottom: 40px;
   }
 }

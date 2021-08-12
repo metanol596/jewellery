@@ -1,7 +1,6 @@
 "use strict";
 
 if (document.querySelectorAll('.accordeon__item').length) {
-  console.log(document.querySelectorAll('.accordeon__item').length);
   const accordionItems = document.querySelectorAll('.accordeon__item');
   accordionItems.forEach(item => {
     item.classList.remove('no-js');
@@ -23,7 +22,6 @@ if (document.querySelectorAll('.accordeon__item').length) {
 ;
 
 if (document.querySelectorAll('.filter__accordeon-item').length) {
-  console.log(document.querySelectorAll('.filter__accordeon-item').length);
   const filterAccordeonItems = document.querySelectorAll('.filter__accordeon-item');
   filterAccordeonItems.forEach(item => {
     item.classList.remove('no-js');
@@ -45,57 +43,94 @@ if (document.querySelectorAll('.filter__accordeon-item').length) {
 ;
 "use strict";
 
-const filter = document.querySelector('.filter');
 const catalogBlock = document.querySelector('.catalog');
+const catalogContainer = document.querySelector('.catalog__container');
+const openFilterButton = document.querySelector('.catalog__filter-button');
 
-if (document.querySelector('.catalog__filter-button')) {
-  const filterButton = document.querySelector('.catalog__filter-button');
-  filterButton.addEventListener('click', () => {
-    filter.classList.toggle('active');
-    catalogBlock.classList.add('active');
-  });
+if (document.querySelector('.filter')) {
+  const filter = document.querySelector('.filter');
+  filter.classList.remove('no-js');
+  openFilterButton.classList.remove('no-js');
+  catalogContainer.classList.remove('no-js');
+
+  if (document.querySelector('.catalog__filter-button')) {
+    const filterButton = document.querySelector('.catalog__filter-button');
+    filterButton.addEventListener('click', () => {
+      filter.classList.toggle('active');
+      catalogBlock.classList.add('active');
+    });
+  }
+
+  if (document.querySelector('.filter__filter-close-button')) {
+    const filterCloseButton = document.querySelector('.filter__filter-close-button');
+    filterCloseButton.addEventListener('click', () => {
+      filter.classList.remove('active');
+      catalogBlock.classList.remove('active');
+    });
+  }
 }
+"use strict";
 
-if (document.querySelector('.filter__filter-close-button')) {
-  const filterCloseButton = document.querySelector('.filter__filter-close-button');
-  filterCloseButton.addEventListener('click', () => {
-    filter.classList.remove('active');
-    catalogBlock.classList.remove('active');
+const menu = document.querySelector('.page-header');
+const menuButton = document.querySelector('.page-header__hamburger button');
+menu.classList.remove('no-js');
+
+if (menu && menuButton) {
+  menuButton.addEventListener('click', () => {
+    if (menu.classList.contains('page-header--closed')) {
+      menu.classList.remove('page-header--closed');
+      menu.classList.add('page-header--opened');
+      document.body.style.overflow = 'hidden';
+    } else {
+      menu.classList.add('page-header--closed');
+      menu.classList.remove('page-header--opened');
+      document.body.removeAttribute('style');
+    }
   });
 }
 "use strict";
 
-const modalButton = document.querySelector('.product-card__product-add-cart-button-wrap button');
-const modals = document.querySelectorAll('.modal--js');
-const overlays = document.querySelectorAll('.page-body__shadow');
-const modalCloseButtons = document.querySelectorAll('.modal__close-modal-button--js'); //const popupNameInput = popup.querySelector('.popup__form-name-input');
-//const popupInputs = popup.querySelectorAll('.for-storage');
-//const popupForm = popup.querySelector('.popup__form');
+const modalButtons = document.querySelectorAll('.modal-button');
+const productModalButton = document.querySelector('.product-card__product-modal-button');
+const loginModalButton = document.querySelector('.user-nav__login');
+const productModal = document.querySelector('.modal');
+const loginModal = document.querySelector('.login');
+const modals = document.querySelectorAll('.modal-js');
+const loginModalInputs = document.querySelectorAll('.login__input-wrap input');
+const overlay = document.querySelector('.page-body__shadow');
+const modalCloseButtons = document.querySelectorAll('.close-modal-button-js');
 
-const removeActiveClass = array => {
-  array.forEach(item => {
-    item.classList.remove('active');
-  });
-};
-
-const removeNoScrollClass = () => {
-  document.body.classList.remove('page-body--no-scroll');
-};
-
-const addActiveClass = array => {
-  array.forEach(item => {
-    item.classList.add('active');
-  });
-};
-
-const addNoScrollClass = () => {
+const onModalButtonClick = evt => {
+  overlay.classList.add('active');
   document.body.classList.add('page-body--no-scroll');
+
+  if (evt.target.closest('.product-card__product-modal-button')) {
+    productModal.classList.add('active');
+  }
+
+  if (evt.target.closest('.login-link')) {
+    evt.preventDefault();
+    loginModal.classList.add('active');
+
+    if (loginModal.querySelector('.login__input-wrap--email input')) {
+      const loginEmailInput = loginModal.querySelector('.login__input-wrap--email input');
+      loginEmailInput.focus();
+    }
+
+    loginModalInputs.forEach(item => {
+      localStorage.setItem(`${item.name}`, `${item.value}`);
+    });
+  }
 };
 
 const onModalCloseButtonClick = () => {
-  removeActiveClass(modals);
-  removeActiveClass(overlays);
-  removeNoScrollClass();
+  modals.forEach(item => {
+    if (item.classList.contains('active')) {
+      overlay.classList.remove('active');
+      document.body.classList.remove('page-body--no-scroll');
+      item.classList.remove('active');
+    }
+  });
 };
 
 const onEscButtonClick = evt => {
@@ -103,45 +138,35 @@ const onEscButtonClick = evt => {
     modals.forEach(item => {
       if (item.classList.contains('active')) {
         evt.preventDefault();
-        removeActiveClass(modals);
-        removeActiveClass(overlays);
-        removeNoScrollClass();
+        item.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.classList.remove('page-body--no-scroll');
       }
     });
   }
 };
 
 const onOverlayClick = evt => {
-  removeActiveClass(modals);
-  removeActiveClass(overlays);
-  removeNoScrollClass();
-  evt.target.classList.remove('active');
-};
-
-const onModalButtonClick = () => {
   modals.forEach(item => {
-    if (!item.classList.contains('active')) {
-      addActiveClass(modals);
-      addActiveClass(overlays);
-      addNoScrollClass(); //popupNameInput.focus();
-      //popupInputs.forEach((item) => {
-      //	localStorage.setItem(`${item.name}`, `${item.value}`);
-      //});
+    if (item.classList.contains('active')) {
+      evt.preventDefault();
+      item.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.classList.remove('page-body--no-scroll');
     }
   });
 };
 
-modalButton.addEventListener('click', onModalButtonClick);
+if (document.querySelector('.modal-button')) {
+  modalButtons.forEach(item => {
+    item.addEventListener('click', onModalButtonClick);
+  });
+}
+
 modalCloseButtons.forEach(item => {
   item.addEventListener('click', onModalCloseButtonClick);
 });
-overlays.forEach(item => {
-  item.addEventListener('click', onOverlayClick);
-}); //modalCloseButtons.forEach((item) => {
-//	item.addEventListener('click', onEscButtonClick);
-//});
-//overlay.addEventListener('click', onOverlayClick);
-
+overlay.addEventListener('click', onOverlayClick);
 window.addEventListener('keydown', onEscButtonClick);
 "use strict";
 
@@ -153,15 +178,12 @@ if (document.querySelector('.swiper-container')) {
     },
     pagination: {
       el: '.swiper-pagination',
-      //буллеты
       type: 'bullets',
       clickable: true,
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + '</span>';
       }
     },
-    //simulateTouch: false,
-    //touchRatio: 2,
     grabCursor: true,
     keyboard: {
       enabled: true,
