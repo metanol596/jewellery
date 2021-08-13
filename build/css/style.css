@@ -1039,7 +1039,7 @@ button.swiper-pagination-bullet {
   }
 }
 
-.page-header__search-input {
+.page-header__search input {
   font-family: "Poppins", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -1049,22 +1049,22 @@ button.swiper-pagination-bullet {
   border: none;
   border-radius: 21px;
 }
-.page-header__search-input:hover {
+.page-header__search input:hover {
   outline: 1px solid #808080;
   outline-offset: 5px;
 }
-.page-header__search-input:focus {
+.page-header__search input:focus {
   outline: 2px solid #000000;
   outline-offset: 5px;
 }
 @media (max-width: 1023px) {
-  .page-header__search-input {
+  .page-header__search input {
     color: #ffffff;
   }
 }
 
-.page-header--opened .page-header__search-input,
-.page-header.no-js .page-header__search-input {
+.page-header--opened input,
+.page-header.no-js input {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 21px;
   padding: 10px 35px 9px;

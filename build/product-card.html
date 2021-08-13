@@ -376,7 +376,7 @@
       <div class="page-footer__subscription">
         <h2>The good stuff in your inbox</h2>
         <p>News and updates from CH. No spam, we promise.</p>
-        <div class="page-footer__email-input-wrap">
+        <form class="page-footer__email-input-wrap"  method="POST" action="https://echo.htmlacademy.ru" autocomplete="off">
           <label class="visually-hidden" for="email">Введите почту для подписки на обновления</label>
           <input type="email" name="email" id="email" placeholder="Your E-mail">
           <button type="submit">
@@ -385,7 +385,7 @@
               <use xlink:href="img/icons/sprite.svg#email-arrow-right"></use>
             </svg>
           </button>
-        </div>
+        </form>
       </div>
       <div class="page-footer__navigation">
         <ul class="page-footer__navigation-list">
@@ -463,7 +463,7 @@
   </footer>
   <section class="modal modal-js">
     <div class="modal__container">
-      <button class="modal__close-modal-button close-modal-button-js">
+      <button class="modal__close-modal-button close-modal-button-js" type="button">
         <svg width="14" height="14" aria-hidden="true">
           <use xlink:href="img/icons/sprite.svg#cross"></use>
         </svg>
@@ -486,13 +486,13 @@
           </div>
         </div>
         <div class="modal__product-to-cart">
-          <button class="modal__product-to-cart-plus">
+          <button class="modal__product-to-cart-plus" type="button">
             <svg width="14" height="14" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#cart-plus"></use>
             </svg>
           </button>
           <span class="modal__product-to-cart-amount">1</span>
-          <button class="modal__product-to-cart-minus">
+          <button class="modal__product-to-cart-minus" type="button">
             <svg width="14" height="2" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#cart-minus"></use>
             </svg>
@@ -512,7 +512,7 @@
   <section class="login modal-js">
     <div class="login__bg-img"></div>
     <div class="login__container">
-      <button class="login__close-login-icon-wrap close-modal-button-js">
+      <button class="login__close-login-icon-wrap close-modal-button-js" type="button">
         <svg class="login__close-login-icon" width="14" height="14" aria-hidden="true">
           <use xlink:href="img/icons/sprite.svg#cross"></use>
         </svg>
@@ -521,7 +521,7 @@
       <form class="login__form" method="POST" action="https://echo.htmlacademy.ru" autocomplete="off">
         <div class="login__inputs-wrap">
           <div class="login__input-wrap login__input-wrap--email">
-            <label class="visually-hidden" for="email"></label>
+            <label class="visually-hidden" for="login-email"></label>
             <input class="for-storage" type="email" name="email" id="login-email" placeholder="Your E-mail" required>
           </div>
           <div class="login__input-wrap login__input-wrap--password">

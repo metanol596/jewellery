@@ -66,7 +66,7 @@
         <a href="#">Contact Us</a>
       </div>
       <div class="main-nav__login">
-        <a class="main-nav__login-link modal-button" href="login.html">Login</a>
+        <a class="main-nav__login-link login-link modal-button" href="login.html">Login</a>
       </div>
     </nav>
   </header>
@@ -594,7 +594,7 @@
   <section class="login modal-js">
     <div class="login__bg-img"></div>
     <div class="login__container">
-      <button class="login__close-login-icon-wrap close-modal-button-js">
+      <button class="login__close-login-icon-wrap close-modal-button-js" type="button">
         <svg class="login__close-login-icon" width="14" height="14" aria-hidden="true">
           <use xlink:href="img/icons/sprite.svg#cross"></use>
         </svg>
@@ -603,7 +603,7 @@
       <form class="login__form" method="POST" action="https://echo.htmlacademy.ru" autocomplete="off">
         <div class="login__inputs-wrap">
           <div class="login__input-wrap login__input-wrap--email">
-            <label class="visually-hidden" for="email"></label>
+            <label class="visually-hidden" for="login-email"></label>
             <input class="for-storage" type="email" name="email" id="login-email" placeholder="Your E-mail" required>
           </div>
           <div class="login__input-wrap login__input-wrap--password">

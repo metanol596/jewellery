@@ -66,7 +66,7 @@
         <a href="#">Contact Us</a>
       </div>
       <div class="main-nav__login">
-        <a class="main-nav__login-link modal-button" href="login.html">Login</a>
+        <a class="main-nav__login-link login-link modal-button" href="login.html">Login</a>
       </div>
     </nav>
   </header>
@@ -81,7 +81,7 @@
     <section class="page-main__catalog catalog">
       <h2 class="visually-hidden">Our catalog</h2>
       <div class="catalog__container no-js">
-        <button class="catalog__filter-button no-js">Filter</button>
+        <button class="catalog__filter-button no-js" type="button">Filter</button>
         <form class="catalog__filter filter no-js" action="https://echo.htmlacademy.ru/" method="POST">
           <button class="filter__filter-close-button" type="button">
             <svg width="32" height="32" aria-hidden="true">
@@ -421,7 +421,7 @@
       <div class="page-footer__subscription">
         <h2>The good stuff in your inbox</h2>
         <p>News and updates from CH. No spam, we promise.</p>
-        <div class="page-footer__email-input-wrap">
+        <form class="page-footer__email-input-wrap" method="POST" action="https://echo.htmlacademy.ru" autocomplete="off">
           <label class="visually-hidden" for="email">Введите почту для подписки на обновления</label>
           <input type="email" name="email" id="email" placeholder="Your E-mail">
           <button type="submit">
@@ -430,7 +430,7 @@
               <use xlink:href="img/icons/sprite.svg#email-arrow-right"></use>
             </svg>
           </button>
-        </div>
+        </form>
       </div>
       <div class="page-footer__navigation">
         <ul class="page-footer__navigation-list">
@@ -509,7 +509,7 @@
   <section class="login modal-js">
     <div class="login__bg-img"></div>
     <div class="login__container">
-      <button class="login__close-login-icon-wrap close-modal-button-js">
+      <button class="login__close-login-icon-wrap close-modal-button-js" type="button">
         <svg class="login__close-login-icon" width="14" height="14" aria-hidden="true">
           <use xlink:href="img/icons/sprite.svg#cross"></use>
         </svg>
@@ -518,7 +518,7 @@
       <form class="login__form" method="POST" action="https://echo.htmlacademy.ru" autocomplete="off">
         <div class="login__inputs-wrap">
           <div class="login__input-wrap login__input-wrap--email">
-            <label class="visually-hidden" for="email"></label>
+            <label class="visually-hidden" for="login-email"></label>
             <input class="for-storage" type="email" name="email" id="login-email" placeholder="Your E-mail" required>
           </div>
           <div class="login__input-wrap login__input-wrap--password">
