@@ -239,6 +239,8 @@
   }
 
   @media (max-width: $mobile-only-width) {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     column-gap: 35px;
   }
 }

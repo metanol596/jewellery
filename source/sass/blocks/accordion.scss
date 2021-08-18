@@ -1,14 +1,18 @@
-.accordeon {
+.accordion {
   border-top: 1px solid #a87b62;
   border-left: 1px solid #a87b62;
   border-right: 1px solid #a87b62;
 }
 
-.accordeon__item {
+.accordion__item {
   border-bottom: 1px solid #a87b62;
   padding: 39px 48px 41px 43px;
 
   cursor: pointer;
+
+  //&:focus {
+  //  outline: 2px solid #1d1613;
+  //}
 
   @media (max-width: $desktop-width - 1) {
     padding: 42px 49px 39px;
@@ -19,13 +23,13 @@
   }
 }
 
-.accordeon__item-title {
+.accordion__item-title {
   display: grid;
   grid-template-columns: 1fr auto;
   padding-top: 5px;
 }
 
-.accordeon__item h3 {
+.accordion__item h3 {
   font-weight: 500;
   font-size: 18px;
   line-height: 130%;
@@ -42,7 +46,7 @@
   }
 }
 
-.accordeon__item.active .accordeon__item-title {
+.accordion__item.active .accordion__item-title {
   margin: 0 0 9px;
 
   @media (max-width: $desktop-width - 1) {
@@ -54,11 +58,11 @@
   }
 }
 
-.accordeon__item-body {
+.accordion__item-body {
   display: none;
 }
 
-.accordeon__item.active .accordeon__item-body {
+.accordion__item.active .accordion__item-body {
   display: block;
   padding: 0 5px 3px;
 
@@ -67,7 +71,7 @@
   }
 }
 
-.accordeon__item.active p {
+.accordion__item.active p {
   width: 527px;
 
   @media (max-width: $desktop-width - 1) {
@@ -79,7 +83,7 @@
   }
 }
 
-.accordeon__item-body p {
+.accordion__item-body p {
   font-weight: normal;
   font-size: 16px;
   line-height: 130%;
@@ -93,8 +97,8 @@
   }
 }
 
-.accordeon__item-down-arrow-icon,
-.accordeon__item-up-arrow-icon {
+.accordion__item-down-arrow-icon,
+.accordion__item-up-arrow-icon {
   fill: none;
 
   @media (max-width: $desktop-width - 1) {
@@ -103,28 +107,28 @@
   }
 }
 
-.accordeon__item .accordeon__item-up-arrow-icon {
+.accordion__item .accordion__item-up-arrow-icon {
   display: none;
 }
 
-.accordeon__item.active .accordeon__item-down-arrow-icon {
+.accordion__item.active .accordion__item-down-arrow-icon {
   display: none;
 }
 
-.accordeon__item.active .accordeon__item-up-arrow-icon {
+.accordion__item.active .accordion__item-up-arrow-icon {
   display: inline-flex;
   transform: rotate(180deg);
 }
 
-.accordeon__item.no-js {
+.accordion__item.no-js {
   cursor: default;
 }
 
-.accordeon__item.no-js .accordeon__item-body {
+.accordion__item.no-js .accordion__item-body {
   display: block;
 }
 
-.accordeon__item.no-js .accordeon__item-title {
+.accordion__item.no-js .accordion__item-title {
   margin: 0 0 9px;
 
   @media (max-width: $desktop-width - 1) {
@@ -136,7 +140,7 @@
   }
 }
 
-.accordeon__item.no-js .accordeon__item-down-arrow-icon,
-.accordeon__item.no-js .accordeon__item-up-arrow-icon {
+.accordion__item.no-js .accordion__item-down-arrow-icon,
+.accordion__item.no-js .accordion__item-up-arrow-icon {
   display: none;
 }

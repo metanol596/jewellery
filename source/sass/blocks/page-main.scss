@@ -96,11 +96,13 @@
 .page-main__lead-block--catalog {
   background-image: url("../img/promo-catalog-bg-desktop.webp");
   background-repeat: no-repeat;
+  background-size: cover;
 
   min-height: 261px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/promo-catalog-bg-desktop@2x.webp");
+    background-size: cover;
   }
 
   @media (max-width: $desktop-width - 1) {

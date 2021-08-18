@@ -1,13 +1,11 @@
 "use strict";
 
-if (document.querySelectorAll('.accordeon__item').length) {
-  const accordionItems = document.querySelectorAll('.accordeon__item');
+if (document.querySelectorAll('.accordion__item').length) {
+  const accordionItems = document.querySelectorAll('.accordion__item');
   accordionItems.forEach(item => {
     item.classList.remove('no-js');
-  });
-  accordionItems.forEach(item => {
     item.addEventListener('click', () => {
-      const activeAccordionItem = document.querySelector('.accordeon__item.active');
+      const activeAccordionItem = document.querySelector('.accordion__item.active');
 
       if (activeAccordionItem && activeAccordionItem !== item) {
         activeAccordionItem.classList.toggle('active');
@@ -16,31 +14,74 @@ if (document.querySelectorAll('.accordeon__item').length) {
       ;
       item.classList.toggle('active');
     });
-  });
-}
+    item.addEventListener('keydown', evt => {
+      if (evt.key === 'Enter') {
+        evt.preventDefault();
+        const activeAccordionItem = document.querySelector('.accordion__item.active');
 
-;
+        if (activeAccordionItem && activeAccordionItem !== item) {
+          activeAccordionItem.classList.toggle('active');
+        }
 
-if (document.querySelectorAll('.filter__accordeon-item').length) {
-  const filterAccordeonItems = document.querySelectorAll('.filter__accordeon-item');
-  filterAccordeonItems.forEach(item => {
-    item.classList.remove('no-js');
-  });
-  filterAccordeonItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const activeFilterAccordionItem = document.querySelector('.filter__accordeon-item.active');
-
-      if (activeFilterAccordionItem && activeFilterAccordionItem !== item) {
-        activeFilterAccordionItem.classList.add('active');
+        ;
+        item.classList.toggle('active');
       }
-
-      ;
-      item.classList.toggle('active');
     });
   });
 }
 
 ;
+
+if (document.querySelectorAll('.filter__accordion-item').length) {
+  const filterAccordionItems = document.querySelectorAll('.filter__accordion-item');
+  filterAccordionItems.forEach(item => {
+    item.classList.remove('no-js');
+    const filterItemTitle = item.querySelector('.filter__accordion-item-title-wrap');
+    filterItemTitle.addEventListener('click', evt => {
+      if (evt.target && evt.target.closest('.filter__accordion-item-title-wrap')) {
+        if (!item.querySelector('.filter__accordion-item-body').classList.contains('active') && !item.classList.contains('active')) {
+          item.querySelector('.filter__accordion-item-body').classList.add('active');
+          item.classList.add('active');
+          item.blur();
+        } else if (item.querySelector('.filter__accordion-item-body').classList.contains('active')) {
+          item.querySelector('.filter__accordion-item-body').classList.remove('active');
+          item.classList.remove('active');
+        }
+      }
+    });
+
+    const onFilterItemKeydown = evt => {
+      if (evt.key === 'Enter') {
+        evt.preventDefault();
+
+        if (!item.querySelector('.filter__accordion-item-body').classList.contains('active') && !item.classList.contains('active')) {
+          item.querySelector('.filter__accordion-item-body').classList.add('active');
+          item.classList.add('active');
+        } else if (item.querySelector('.filter__accordion-item-body').classList.contains('active')) {
+          item.querySelector('.filter__accordion-item-body').classList.remove('active');
+          item.classList.remove('active');
+        }
+      }
+    };
+
+    item.addEventListener('keydown', onFilterItemKeydown);
+    const filterItemInputs = item.querySelectorAll('.filter__accordion-item-input-wrap input');
+    filterItemInputs.forEach(input => {
+      input.addEventListener('keydown', evt => {
+        if (evt.key === 'Enter') {
+          evt.preventDefault();
+          item.removeEventListener('keydown', onFilterItemKeydown);
+
+          if (evt.target.checked === true) {
+            evt.target.checked = false;
+          } else {
+            evt.target.checked = true;
+          }
+        }
+      });
+    });
+  });
+}
 "use strict";
 
 const catalogBlock = document.querySelector('.catalog');
@@ -99,6 +140,7 @@ const modals = document.querySelectorAll('.modal-js');
 const loginModalInputs = document.querySelectorAll('.login__input-wrap input');
 const overlay = document.querySelector('.page-body__shadow');
 const modalCloseButtons = document.querySelectorAll('.close-modal-button-js');
+const productCardPlusButton = document.querySelector('.modal__product-to-cart-plus');
 
 const onModalButtonClick = evt => {
   overlay.classList.add('active');
@@ -106,6 +148,7 @@ const onModalButtonClick = evt => {
 
   if (evt.target.closest('.product-card__product-modal-button')) {
     productModal.classList.add('active');
+    productCardPlusButton.focus();
   }
 
   if (evt.target.closest('.login-link')) {
@@ -173,8 +216,8 @@ window.addEventListener('keydown', onEscButtonClick);
 if (document.querySelector('.swiper-container')) {
   new Swiper('.swiper-container', {
     navigation: {
-      nextEl: '.swiper-button-prev',
-      prevEl: '.swiper-button-next'
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
     },
     pagination: {
       el: '.swiper-pagination',

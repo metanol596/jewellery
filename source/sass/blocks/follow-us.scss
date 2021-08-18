@@ -84,6 +84,15 @@
 .follow-us__grid-photo--3 {
   grid-column: 2 / 3;
   grid-row: 1 / -1;
+  height: fit-content;
+
+  @media (max-width: 1220px) {
+    grid-row-end: 2;
+  }
+
+  @media (max-width: $desktop-width - 1) {
+    grid-row-end: -1;
+  }
 }
 
 .follow-us__grid-photo--4 {
@@ -105,9 +114,10 @@
   display: flex;
   object-fit: cover;
   width: 100%;
+  height: 100%;
+}
 
-  @media (max-width: $desktop-width - 1) {
-    width: 100%;
-    height: 100%;
-  }
+.follow-us__grid-photo--3 img {
+  width: 100%;
+  height: auto;
 }

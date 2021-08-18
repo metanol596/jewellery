@@ -7,6 +7,7 @@ const modals = document.querySelectorAll('.modal-js');
 const loginModalInputs = document.querySelectorAll('.login__input-wrap input');
 const overlay = document.querySelector('.page-body__shadow');
 const modalCloseButtons = document.querySelectorAll('.close-modal-button-js');
+const productCardPlusButton = document.querySelector('.modal__product-to-cart-plus');
 
 const onModalButtonClick = (evt) => {
 	overlay.classList.add('active');
@@ -14,6 +15,7 @@ const onModalButtonClick = (evt) => {
 
 	if (evt.target.closest('.product-card__product-modal-button')) {
 		productModal.classList.add('active');
+		productCardPlusButton.focus();
 	}
 
 	if ((evt.target.closest('.login-link'))) {

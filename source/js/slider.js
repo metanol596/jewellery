@@ -1,8 +1,8 @@
 if (document.querySelector('.swiper-container')) {
 	new Swiper('.swiper-container', {
 		navigation: {
-			nextEl: '.swiper-button-prev',
-			prevEl: '.swiper-button-next'
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
 		},
 		pagination: {
 			el: '.swiper-pagination',

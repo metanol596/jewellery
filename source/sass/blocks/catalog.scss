@@ -34,7 +34,8 @@
   @media (max-width: $mobile-only-width) {
     row-gap: 40px;
     padding: 0 16px 34px;
-    width: 320px;
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -73,6 +74,10 @@
 .catalog__cards-block {
   display: grid;
   grid-template-rows: 1fr 50px;
+
+  @media (max-width: $mobile-only-width) {
+    justify-content: center;
+  }
 }
 
 .catalog__cards {
@@ -150,6 +155,10 @@
 .catalog__card a {
   display: inline-flex;
   flex-direction: column;
+
+  @media (max-width: $mobile-only-width) {
+    width: 100%;
+  }
 }
 
 .catalog__card-img-wrap {

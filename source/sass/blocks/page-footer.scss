@@ -1,36 +1,36 @@
 .page-footer {
   background-color: #000000;
 
-  padding: 93px calc(50% - 634px) 47px;
+  padding: 93px calc(50% - 634px) 72px;
 
   @media (max-width: $desktop-width - 1) {
-    padding: 50px 24px 51px;
+    padding: 50px 24px 36px;
   }
 
   @media (max-width: $mobile-only-width) {
-    padding: 50px 15px 53px;
+    padding: 50px 15px 35px;
   }
 }
 
 .page-footer__container {
   display: flex;
-  column-gap: 89px;
   flex-wrap: wrap;
   padding: 0 49px;
+  justify-content: space-between;
 
   @media (max-width: $desktop-width - 1) {
     padding: 0 21px;
-    column-gap: 82px;
+    justify-content: flex-start;
   }
 
   @media (max-width: $mobile-only-width) {
     padding: 0;
+    flex-direction: column;
   }
 }
 
 .page-footer__subscription {
-  width: 500px;
-  margin-bottom: 50px;
+  width: 42.7%;
 
   @media (max-width: $desktop-width - 1) {
     width: 83%;
@@ -75,6 +75,8 @@
 
 .page-footer__email-input-wrap {
   border-bottom: 1px solid #ffffff;
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 .page-footer__email-input-wrap input {
@@ -85,20 +87,11 @@
 
   background-color: #000000;
 
-  padding: 10px 0 10px;
+  padding: 9px 0;
   border: none;
-  width: 394px;
 
   &:focus {
-    background-color: #ffffff;
-  }
-
-  @media (max-width: $desktop-width - 1) {
-    width: 81%;
-  }
-
-  @media (max-width: $mobile-only-width) {
-    width: 63%;
+    color: #ffffff;
   }
 }
 
@@ -133,19 +126,20 @@
 }
 
 .page-footer__navigation {
-  width: 380px;
+  width: 32.4%;
   display: flex;
-  column-gap: 72px;
+  justify-content: space-between;
 
   @media (max-width: $desktop-width - 1) {
-    column-gap: 86px;
+    width: 57.4%;
+    margin-right: 69px;
   }
 
   @media (max-width: $mobile-only-width) {
     flex-wrap: wrap;
     width: 100%;
-    column-gap: 35px;
-    margin-bottom: 7px;
+    margin: 0 0 7px;
+    flex-direction: column;
   }
 }
 
@@ -156,13 +150,22 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  row-gap: 18px;
 }
 
 .page-footer__navigation-list {
+  min-width: 135px;
+
   @media (max-width: $mobile-only-width) {
-    margin-bottom: 34px;
+    margin-bottom: 17px;
   }
+}
+
+.page-footer__navigation-list:first-of-type {
+  margin-right: 10px;
+}
+
+.page-footer__navigation-list li {
+  margin-bottom: 18px;
 }
 
 .page-footer__navigation-list a {
@@ -178,8 +181,15 @@
 .page-footer__socials {
   @media (max-width: $mobile-only-width) {
     flex-direction: row;
-    column-gap: 30px;
     flex-wrap: wrap;
+  }
+}
+
+.page-footer__socials li {
+  margin-bottom: 18px;
+
+  @media (max-width: $mobile-only-width) {
+    margin-right: 30px;
   }
 }
 
