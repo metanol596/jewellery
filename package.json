@@ -65,6 +65,8 @@
   },
   "dependencies": {
     "del": "^6.0.0",
+    "dom-focus-lock": "^1.0.4",
     "imask": "^6.1.0"
-  }
+  },
+  "type": "commonjs"
 }

@@ -9,9 +9,34 @@ const overlay = document.querySelector('.page-body__shadow');
 const modalCloseButtons = document.querySelectorAll('.close-modal-button-js');
 const productCardPlusButton = document.querySelector('.modal__product-to-cart-plus');
 
+function handleKey(evt) {
+	if (evt.key === 'Tab') {
+		modals.forEach((modal) => {
+		  let focusable = modal.querySelectorAll('input, button, select, textarea, a');
+			if (focusable.length) {
+		  	let first = focusable[0];
+		  	let last = focusable[focusable.length - 1];
+		  	let shift = evt.shiftKey;
+		  	if (shift) {
+		  		if (evt.target === first) {
+		  			last.focus();
+		  			evt.preventDefault();
+		  		}
+		  	} else {
+		  		if (evt.target === last) {
+		  			first.focus();
+		  			evt.preventDefault();
+		  		}
+		  	}
+		  }
+		})
+	}
+}
+
 const onModalButtonClick = (evt) => {
 	overlay.classList.add('active');
 	document.body.classList.add('page-body--no-scroll');
+	window.addEventListener('keydown', handleKey);
 
 	if (evt.target.closest('.product-card__product-modal-button')) {
 		productModal.classList.add('active');
@@ -21,6 +46,7 @@ const onModalButtonClick = (evt) => {
 	if ((evt.target.closest('.login-link'))) {
 		evt.preventDefault();
 		loginModal.classList.add('active');
+
 		if (loginModal.querySelector('.login__input-wrap--email input')) {
 			const loginEmailInput = loginModal.querySelector('.login__input-wrap--email input');
 			loginEmailInput.focus();
@@ -38,6 +64,8 @@ const onModalCloseButtonClick = () => {
 			overlay.classList.remove('active');
 			document.body.classList.remove('page-body--no-scroll');
 			item.classList.remove('active');
+			window.removeEventListener('keydown', handleKey);
+			//focusLock.off(item);
 		}
 	})
 };
@@ -50,6 +78,8 @@ const onEscButtonClick = (evt) => {
 				item.classList.remove('active');
 				overlay.classList.remove('active');
 				document.body.classList.remove('page-body--no-scroll');
+				window.removeEventListener('keydown', handleKey);
+				//focusLock.off(item);
 			}
 		})
 	}
@@ -62,6 +92,8 @@ const onOverlayClick = (evt) => {
 			item.classList.remove('active');
 			overlay.classList.remove('active');
 			document.body.classList.remove('page-body--no-scroll');
+			window.removeEventListener('keydown', handleKey);
+			//focusLock.off(item);
 		}
 	})
 };

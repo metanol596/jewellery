@@ -1260,7 +1260,8 @@ button.swiper-pagination-bullet {
 }
 @media (max-width: 767px) {
   .new-items__container {
-    max-width: 290px;
+    min-width: 290px;
+    padding: 0 15px;
   }
 }
 
@@ -1354,7 +1355,7 @@ button.swiper-pagination-bullet {
 }
 @media (max-width: 767px) {
   .slider__slide-img-wrap img {
-    width: 130px;
+    width: 100%;
     height: auto;
   }
 }
@@ -1373,13 +1374,18 @@ button.swiper-pagination-bullet {
 }
 @media (max-width: 767px) {
   .slider__container .swiper-slide {
-    max-width: 130px;
+    max-width: unset;
   }
 }
 
 .slider__slide a {
   display: inline-block;
   vertical-align: middle;
+}
+@media (max-width: 767px) {
+  .slider__slide a {
+    width: 100%;
+  }
 }
 
 .slider__slide-title-wrap {
@@ -1602,7 +1608,7 @@ button.swiper-pagination-bullet {
 }
 
 .page-main__lead-block {
-  background-image: url("../img/promo-bg-desktop.webp");
+  background-image: url("../img/promo-bg-desktop.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #865c45;
@@ -1611,63 +1617,63 @@ button.swiper-pagination-bullet {
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .page-main__lead-block {
-    background-image: url("../img/promo-bg-desktop@2x.webp");
+    background-image: url("../img/promo-bg-desktop@2x.png");
     background-size: cover;
   }
 }
 @media (max-width: 1023px) {
   .page-main__lead-block {
-    background-image: url("../img/promo-bg-tablet.webp");
+    background-image: url("../img/promo-bg-tablet.png");
   }
 }
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
   .page-main__lead-block {
-    background-image: url("../img/promo-bg-tablet@2x.webp");
+    background-image: url("../img/promo-bg-tablet@2x.png");
   }
 }
 @media (max-width: 767px) {
   .page-main__lead-block {
-    background-image: url("../img/promo-bg-mobile.webp");
+    background-image: url("../img/promo-bg-mobile.png");
     padding: 95px 24px;
   }
 }
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
   .page-main__lead-block {
-    background-image: url("../img/promo-bg-mobile@2x.webp");
+    background-image: url("../img/promo-bg-mobile@2x.png");
   }
 }
 
 .page-main__lead-block--catalog {
-  background-image: url("../img/promo-catalog-bg-desktop.webp");
+  background-image: url("../img/promo-catalog-bg-desktop.png");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 261px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .page-main__lead-block--catalog {
-    background-image: url("../img/promo-catalog-bg-desktop@2x.webp");
+    background-image: url("../img/promo-catalog-bg-desktop@2x.png");
     background-size: cover;
   }
 }
 @media (max-width: 1023px) {
   .page-main__lead-block--catalog {
-    background-image: url("../img/promo-catalog-bg-tablet.webp");
+    background-image: url("../img/promo-catalog-bg-tablet.png");
   }
 }
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
   .page-main__lead-block--catalog {
-    background-image: url("../img/promo-catalog-bg-tablet@2x.webp");
+    background-image: url("../img/promo-catalog-bg-tablet@2x.png");
   }
 }
 @media (max-width: 767px) {
   .page-main__lead-block--catalog {
-    background-image: url("../img/promo-catalog-bg-mobile.webp");
+    background-image: url("../img/promo-catalog-bg-mobile.png");
     padding: 77px 24px;
   }
 }
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
   .page-main__lead-block--catalog {
-    background-image: url("../img/promo-catalog-bg-mobile@2x.webp");
+    background-image: url("../img/promo-catalog-bg-mobile@2x.png");
   }
 }
 
@@ -3314,35 +3320,35 @@ button.swiper-pagination-bullet {
 
 .login__bg-img {
   height: 138px;
-  background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-desktop.webp");
+  background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-desktop.png");
   background-repeat: no-repeat;
   background-color: #c7a898;
   background-size: cover;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .login__bg-img {
-    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-desktop@2x.webp");
+    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-desktop@2x.png");
   }
 }
 @media (max-width: 1023px) {
   .login__bg-img {
-    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-tablet.webp");
+    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-tablet.png");
   }
 }
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
   .login__bg-img {
-    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-tablet@2x.webp");
+    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-tablet@2x.png");
   }
 }
 @media (max-width: 767px) {
   .login__bg-img {
     height: 84px;
-    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-mobile.webp");
+    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-mobile.png");
   }
 }
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
   .login__bg-img {
-    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-mobile@2x.webp");
+    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-mobile@2x.png");
   }
 }
 
@@ -3369,6 +3375,9 @@ button.swiper-pagination-bullet {
   background-color: transparent;
   padding: 7px;
   cursor: pointer;
+}
+.login__close-login-icon-wrap:focus {
+  outline: 2px solid #000000;
 }
 @media (max-width: 767px) {
   .login__close-login-icon-wrap {

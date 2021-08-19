@@ -61,7 +61,7 @@
 }
 
 .page-main__lead-block {
-  background-image: url("../img/promo-bg-desktop.webp");
+  background-image: url("../img/promo-bg-desktop.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #865c45;
@@ -70,56 +70,56 @@
   padding: 90px 24px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/promo-bg-desktop@2x.webp");
+    background-image: url("../img/promo-bg-desktop@2x.png");
     background-size: cover;
   }
 
   @media (max-width: $desktop-width - 1) {
-    background-image: url("../img/promo-bg-tablet.webp");
+    background-image: url("../img/promo-bg-tablet.png");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo-bg-tablet@2x.webp");
+      background-image: url("../img/promo-bg-tablet@2x.png");
     }
   }
 
   @media (max-width: $mobile-only-width) {
-    background-image: url("../img/promo-bg-mobile.webp");
+    background-image: url("../img/promo-bg-mobile.png");
 
     padding: 95px 24px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo-bg-mobile@2x.webp");
+      background-image: url("../img/promo-bg-mobile@2x.png");
     }
   }
 }
 
 .page-main__lead-block--catalog {
-  background-image: url("../img/promo-catalog-bg-desktop.webp");
+  background-image: url("../img/promo-catalog-bg-desktop.png");
   background-repeat: no-repeat;
   background-size: cover;
 
   min-height: 261px;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/promo-catalog-bg-desktop@2x.webp");
+    background-image: url("../img/promo-catalog-bg-desktop@2x.png");
     background-size: cover;
   }
 
   @media (max-width: $desktop-width - 1) {
-    background-image: url("../img/promo-catalog-bg-tablet.webp");
+    background-image: url("../img/promo-catalog-bg-tablet.png");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo-catalog-bg-tablet@2x.webp");
+      background-image: url("../img/promo-catalog-bg-tablet@2x.png");
     }
   }
 
   @media (max-width: $mobile-only-width) {
-    background-image: url("../img/promo-catalog-bg-mobile.webp");
+    background-image: url("../img/promo-catalog-bg-mobile.png");
 
     padding: 77px 24px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/promo-catalog-bg-mobile@2x.webp");
+      background-image: url("../img/promo-catalog-bg-mobile@2x.png");
     }
   }
 }

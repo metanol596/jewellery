@@ -38,7 +38,8 @@
   }
 
   @media (max-width: $mobile-only-width) {
-    max-width: 290px;
+    min-width: 290px;
+    padding: 0 15px;
   }
 }
 

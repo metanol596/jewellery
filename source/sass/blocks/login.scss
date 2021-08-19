@@ -47,30 +47,30 @@
 .login__bg-img {
   height: 138px;
 
-  background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-desktop.webp");
+  background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-desktop.png");
   background-repeat: no-repeat;
   background-color: #c7a898;
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-desktop@2x.webp");
+    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-desktop@2x.png");
   }
 
   @media (max-width: $desktop-width - 1) {
-    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-tablet.webp");
+    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-tablet.png");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-tablet@2x.webp");
+      background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-tablet@2x.png");
     }
   }
 
   @media (max-width: $mobile-only-width) {
     height: 84px;
 
-    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-mobile.webp");
+    background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-mobile.png");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-mobile@2x.webp");
+      background-image: url("../img/sweet-ice-cream-photography-ootc-unsplash(1)-mobile@2x.png");
     }
   }
 }
@@ -97,6 +97,10 @@
   padding: 7px;
 
   cursor: pointer;
+
+  &:focus {
+    outline: 2px solid #000000;
+  }
 
   @media (max-width: $mobile-only-width) {
     top: -68px;
