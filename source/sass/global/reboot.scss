@@ -21,6 +21,10 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+
+  @media (max-width: $mobile-only-width) {
+    display: block;
+  }
 }
 
 body.shadow {

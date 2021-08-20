@@ -10,9 +10,7 @@ if (menu && menuButton) {
 			menu.classList.remove('page-header--closed');
 			menu.classList.add('page-header--opened');
 			document.body.style.overflow = 'hidden';
-			focusLock.on(menu);
 		} else {
-			focusLock.off(menu);
 			menu.classList.add('page-header--closed');
 			menu.classList.remove('page-header--opened');
 			document.body.removeAttribute('style');

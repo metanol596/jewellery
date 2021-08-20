@@ -1,3 +1,9 @@
+.page-main {
+  @media (max-width: $mobile-only-width) {
+    min-height: calc(100vh - 774px);
+  }
+}
+
 .page-main--product-card {
   padding: 0 calc(50% - 634px);
 
@@ -17,7 +23,6 @@
 
   @media (max-width: $mobile-only-width) {
     margin-bottom: 48px;
-    padding: 60px 0;
   }
 }
 

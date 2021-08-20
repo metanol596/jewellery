@@ -48,6 +48,7 @@ const onModalButtonClick = (evt) => {
 		loginModal.classList.add('active');
 
 		if (loginModal.querySelector('.login__input-wrap--email input')) {
+			console.log(loginModal.querySelector('.login__input-wrap--email input'))
 			const loginEmailInput = loginModal.querySelector('.login__input-wrap--email input');
 			loginEmailInput.focus();
 		}
@@ -65,7 +66,6 @@ const onModalCloseButtonClick = () => {
 			document.body.classList.remove('page-body--no-scroll');
 			item.classList.remove('active');
 			window.removeEventListener('keydown', handleKey);
-			//focusLock.off(item);
 		}
 	})
 };
@@ -79,7 +79,6 @@ const onEscButtonClick = (evt) => {
 				overlay.classList.remove('active');
 				document.body.classList.remove('page-body--no-scroll');
 				window.removeEventListener('keydown', handleKey);
-				//focusLock.off(item);
 			}
 		})
 	}
@@ -93,7 +92,6 @@ const onOverlayClick = (evt) => {
 			overlay.classList.remove('active');
 			document.body.classList.remove('page-body--no-scroll');
 			window.removeEventListener('keydown', handleKey);
-			//focusLock.off(item);
 		}
 	})
 };

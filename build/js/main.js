@@ -122,9 +122,7 @@ if (menu && menuButton) {
       menu.classList.remove('page-header--closed');
       menu.classList.add('page-header--opened');
       document.body.style.overflow = 'hidden';
-      focusLock.on(menu);
     } else {
-      focusLock.off(menu);
       menu.classList.add('page-header--closed');
       menu.classList.remove('page-header--opened');
       document.body.removeAttribute('style');
@@ -185,6 +183,7 @@ const onModalButtonClick = evt => {
     loginModal.classList.add('active');
 
     if (loginModal.querySelector('.login__input-wrap--email input')) {
+      console.log(loginModal.querySelector('.login__input-wrap--email input'));
       const loginEmailInput = loginModal.querySelector('.login__input-wrap--email input');
       loginEmailInput.focus();
     }
@@ -201,7 +200,7 @@ const onModalCloseButtonClick = () => {
       overlay.classList.remove('active');
       document.body.classList.remove('page-body--no-scroll');
       item.classList.remove('active');
-      window.removeEventListener('keydown', handleKey); //focusLock.off(item);
+      window.removeEventListener('keydown', handleKey);
     }
   });
 };
@@ -214,7 +213,7 @@ const onEscButtonClick = evt => {
         item.classList.remove('active');
         overlay.classList.remove('active');
         document.body.classList.remove('page-body--no-scroll');
-        window.removeEventListener('keydown', handleKey); //focusLock.off(item);
+        window.removeEventListener('keydown', handleKey);
       }
     });
   }
@@ -227,7 +226,7 @@ const onOverlayClick = evt => {
       item.classList.remove('active');
       overlay.classList.remove('active');
       document.body.classList.remove('page-body--no-scroll');
-      window.removeEventListener('keydown', handleKey); //focusLock.off(item);
+      window.removeEventListener('keydown', handleKey);
     }
   });
 };
