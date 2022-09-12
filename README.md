@@ -8,7 +8,7 @@
 
 ## Использованные технологии:
 
-- HTML, CSS
+- HTML, Sass
 – JavaScript
 - Gulp
 
