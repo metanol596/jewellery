@@ -9,7 +9,7 @@
 ## Использованные технологии:
 
 - HTML, Sass
-– JavaScript
+- JavaScript
 - Gulp
 
 ## Дополнительные библиотеки:
